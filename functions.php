@@ -215,7 +215,7 @@ function __dxn(
     string $singular,
     string $plural,
     int $count,
-    mixed ...$args
+    mixed ...$args,
 ): string {
     if (!$singular) {
         return '';
@@ -282,7 +282,7 @@ function toDateTime(mixed $value, string $format = DateTimeInterface::ATOM): ?Da
  *
  * @param mixed $value The value to convert to Date.
  * @param string $format The date format the value is in. Defaults to Short (ex: 1970-01-01) format.
- * @return Date|null Returns a Date object if parsing is successful, or NULL otherwise.
+ * @return \Cake\I18n\Date|null Returns a Date object if parsing is successful, or NULL otherwise.
  * @since 5.1.0
  */
 function toDate(mixed $value, string $format = 'Y-m-d'): ?Date
@@ -298,6 +298,7 @@ function toDate(mixed $value, string $format = 'Y-m-d'): ?Date
     if (is_numeric($value)) {
         try {
             $datetime = DateTime::createFromTimestamp((float)$value);
+
             return Date::create($datetime->year, $datetime->month, $datetime->day);
         } catch (Throwable) {
             return null;
@@ -307,6 +308,7 @@ function toDate(mixed $value, string $format = 'Y-m-d'): ?Date
     if (is_string($value)) {
         try {
             $datetime = DateTime::createFromFormat($format, $value);
+
             return Date::parse($datetime);
         } catch (Throwable) {
             return null;
