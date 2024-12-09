@@ -470,7 +470,7 @@ class DateTime extends Chronos implements JsonSerializable, Stringable
      * ### Options:
      *
      * - `from` => another Time object representing the "now" time
-     * - `format` => a fall back format if the relative time is longer than the duration specified by end
+     * - `format` => a fallback format if the relative time is longer than the duration specified by end
      * - `accuracy` => Specifies how accurate the date should be described (array)
      *     - year =>   The format if years > 0   (default "day")
      *     - month =>  The format if months > 0  (default "day")
