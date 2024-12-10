@@ -28,9 +28,9 @@
         "source": "https://github.com/cakephp/i18n"
     },
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.4",
         "ext-intl": "*",
-        "cakephp/core": "^5.1",
+        "cakephp/core": "6.x-dev",
         "cakephp/chronos": "^3.1"
     },
     "suggest": {
@@ -43,5 +43,7 @@
         "files": [
             "functions.php"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
