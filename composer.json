@@ -30,11 +30,8 @@
     "require": {
         "php": ">=8.4",
         "ext-intl": "*",
-        "cakephp/core": "6.x-dev",
+        "cakephp/core": "^6.0",
         "cakephp/chronos": "^3.1"
-    },
-    "suggest": {
-        "cakephp/cache": "Require this if you want automatic caching of translators"
     },
     "autoload": {
         "psr-4": {
@@ -43,6 +40,9 @@
         "files": [
             "functions.php"
         ]
+    },
+    "suggest": {
+        "cakephp/cache": "Require this if you want automatic caching of translators"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
