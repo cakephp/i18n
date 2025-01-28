@@ -30,7 +30,7 @@
     "require": {
         "php": ">=8.4",
         "ext-intl": "*",
-        "cakephp/core": "^6.0",
+        "cakephp/core": "6.0.*@dev",
         "cakephp/chronos": "^3.1"
     },
     "autoload": {
@@ -44,6 +44,10 @@
     "suggest": {
         "cakephp/cache": "Require this if you want automatic caching of translators"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-5.next": "6.0.x-dev"
+        }
+    }
 }
