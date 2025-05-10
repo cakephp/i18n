@@ -209,9 +209,8 @@ class DateTime extends Chronos implements JsonSerializable, Stringable
      *
      * @param array<int>|string|int $format Format.
      * @return void
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
      */
-    public static function setToStringFormat($format): void
+    public static function setToStringFormat(array|string|int $format): void
     {
         static::$_toStringFormat = $format;
     }

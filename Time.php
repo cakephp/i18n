@@ -80,9 +80,8 @@ class Time extends ChronosTime implements JsonSerializable, Stringable
      *
      * @param string|int $format Format.
      * @return void
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
      */
-    public static function setToStringFormat($format): void
+    public static function setToStringFormat(string|int $format): void
     {
         static::$_toStringFormat = $format;
     }
