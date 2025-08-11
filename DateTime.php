@@ -629,16 +629,12 @@ class DateTime extends Chronos implements JsonSerializable, Stringable
         $quarter = $this->toQuarter();
         $year = $this->format('Y');
 
-        switch ($quarter) {
-            case 1:
-                return [$year . '-01-01', $year . '-03-31'];
-            case 2:
-                return [$year . '-04-01', $year . '-06-30'];
-            case 3:
-                return [$year . '-07-01', $year . '-09-30'];
-            default:
-                return [$year . '-10-01', $year . '-12-31'];
-        }
+        return match ($quarter) {
+            1 => [$year . '-01-01', $year . '-03-31'],
+            2 => [$year . '-04-01', $year . '-06-30'],
+            3 => [$year . '-07-01', $year . '-09-30'],
+            default => [$year . '-10-01', $year . '-12-31'],
+        };
     }
 
     /**
