@@ -131,7 +131,7 @@ class RelativeTimeFormatter implements DifferenceFormatterInterface
             return __d('cake', 'just now', 'just now');
         }
 
-        if ($diff > abs($now - (int)(new DateTime($options['end']))->format('U'))) {
+        if ($diff > abs($now - (int)new DateTime($options['end'])->format('U'))) {
             return sprintf($options['absoluteString'], $time->i18nFormat($options['format']));
         }
 
@@ -361,7 +361,7 @@ class RelativeTimeFormatter implements DifferenceFormatterInterface
             return __d('cake', 'today');
         }
 
-        if ($diff > abs($now - (int)(new Date($options['end']))->format('U'))) {
+        if ($diff > abs($now - (int)new Date($options['end'])->format('U'))) {
             return sprintf($options['absoluteString'], $date->i18nFormat($options['format']));
         }
 
